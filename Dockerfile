@@ -1,9 +1,9 @@
 FROM debian:jessie
 MAINTAINER Ilya Makarov <im@e11it.ru>
 
-LABEL version="0.8.3"
+LABEL version="0.8.8"
 
-ENV PROXY_VER=0.8.3
+ENV PROXY_VER=0.8.8
 
 
 RUN apt-get -q update &&\
@@ -28,6 +28,7 @@ RUN apt-get -q update &&\
 
 # Add config file
 ADD 3proxy.cfg /etc/3proxy/3proxy.cfg
+ADD proxyauth /etc/3proxy/.proxyauth
 
 # Ports
 EXPOSE 8080 3128
