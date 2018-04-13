@@ -3,8 +3,6 @@
   container_name: 3proxy
   restart: always
   ports:
-    - 8080:8080
-    - 3128:3128
+    - 65123:65123
   volumes:
-    - ./3proxy.cfg:/etc/3proxy/3proxy.cfg:ro
-    - ./proxyauth:/etc/3proxy/.proxyauth:ro
+    - ./3proxy.cfg:/etc/3proxy/3proxy.cfg
